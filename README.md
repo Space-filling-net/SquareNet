@@ -3,13 +3,14 @@
 [![PyPI version](https://img.shields.io/pypi/v/squarenet.svg)](https://pypi.org/project/squarenet/)
 [![Documentation Status](https://readthedocs.org/projects/squarenet/badge/?version=latest)](https://squarenet.readthedocs.io/en/latest/)
 <p align="center">
+  <img src="plots/france.png" width="200">
+   <img src="plots/ring.png" width="200">
+  <img src="plots/germany.png" width="200">
+</p>
+<p align="center">
   <img src="plots/grided_lena.png" width="200">
   <img src="plots/ball.png" width="200">
   <img src="plots/grided_barbara.png" width="200">
-</p>
-<p align="center">
-  <img src="plots/france.png" width="200">
-  <img src="plots/germany.png" width="200">
 </p>
 
 ❒  SquareNet
