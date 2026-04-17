@@ -69,12 +69,6 @@ You can use the built-in checkerboard to verify neighborhood preservation:
 
 ```python
 sqnet = SquareNet(IJ_=(400, 400))
-sqnet.fit("ring")
-sqnet.checkerboard()
-```
-
-```python
-sqnet = SquareNet(IJ_=(400, 400))
 sqnet.fit("france") #require !pip install shapely
 sqnet.checkerboard()
 ```
