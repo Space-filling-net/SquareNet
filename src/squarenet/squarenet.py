@@ -2,7 +2,8 @@ import numpy as np
 from .core import sort_increasing, carthesian_heuristics
 from .boards import checkerboard, checkerboard2D, checkerboard3D
 from .views import localview, lazylocalview
-from .utils import initpoint, dualgrid, dualgridflat
+from .utils import dualgrid, dualgridflat
+from .sampler import samplepoints
 from warnings import warn
 
 class SquareNet:
@@ -46,10 +47,10 @@ class SquareNet:
 
         Args:
             points (np.ndarray or str): Array of shape (N, D) or a method name supported
-                                        by .utils.initpoint.
+                                        by .sampler.samplepoints
         """
         if isinstance(points, str):
-            points = initpoint(method=points, size=(self.N, self.D))
+            points = samplepoints(method=points, size=(self.N, self.D))
         
         N, D = points.shape
         assert N == self.N, f"Input points ({N}) must match grid size {self.N}"

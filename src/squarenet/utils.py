@@ -25,51 +25,6 @@ def dualgridflat(grid):
     dgf = np.ascontiguousarray(dgf)
     return dgf
 
-
-def ball(n, d):
-    points = np.random.randn(n, d)
-    radius = np.random.uniform(0, 1, size=n)**(1/d)
-    points = points / np.linalg.norm(points, axis=1, keepdims=True) * radius[:, None]
-    return points
-
-def initpoint(method, size):
-
-    N, D = size
-    if method == "test":
-        points = np.random.rand(N, D)
-    if method == "ball":
-        points = ball(N, D)
-    if method == "ring":
-        points = ball(N, D)
-        dir = points/(np.linalg.norm(points, axis  = -1, keepdims = True) + 0.000001)
-        points = points + 0.5*dir
-
-    if method in ["france", "germany"]:
-        country = method
-        from shapely import wkb
-        from shapely.geometry import Point
-        import importlib.resources as pkg_resources
-
-        with pkg_resources.open_binary("squarenet.data", f"{country}.wkb") as f:
-            country = wkb.load(f)
-
-        # Bounding box
-        minx, miny, maxx, maxy = country.bounds
-
-
-        points = []
-        
-        while len(points) < N:
-            x = np.random.uniform(minx, maxx)
-            y = np.random.uniform(miny, maxy)
-            p = Point(x, y)
-
-            if country.contains(p):
-                points.append(p)
-        points = np.array([[p.x, p.y] for p in points])
-
-    return points
-
 class Potential:
     """Simple O(N²) potential wrapper with safety estimates."""
 
