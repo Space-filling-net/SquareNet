@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 dist/
 build/
+sqrnet/
 test.ipynb
 *bubbletree.py
 03_bubble_tree.ipynb
