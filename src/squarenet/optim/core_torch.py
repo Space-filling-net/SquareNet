@@ -142,8 +142,8 @@ def robust_cartesian_sort(gridmap, points, max_iter=100, verbose=2, loop=None, l
             break
 
     g, lc2 = _cleanup(g, points, end_loop, loop, loopseq, max_iter, verbose)
-    full_lc = learning_curve.extend(lc2)
-    return g, full_lc
+    learning_curve.extend(lc2)
+    return g, learning_curve
 
 
 def ultimate_cartesian_sort(gridmap, points, max_iter=100, verbose=2, loop=None, loopseq="decreasing"):
@@ -170,5 +170,4 @@ def ultimate_cartesian_sort(gridmap, points, max_iter=100, verbose=2, loop=None,
                 htable.sort()
 
     g, lc2 = _cleanup(htable.gtable, points, end_loop, loop, loopseq, max_iter, verbose)
-    full_lc = lc1.extend(lc2)
-    return g, full_lc
+    return g, lc1.extend(lc2)
