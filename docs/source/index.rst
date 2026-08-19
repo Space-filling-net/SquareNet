@@ -2,7 +2,7 @@ squarenet documentation
 =======================
 
 .. image:: https://colab.research.google.com/assets/colab-badge.svg
-   :target: https://colab.research.google.com/github/ArmanddeCacqueray/SquareNet/blob/main/00_getting_started.ipynb
+   :target: https://colab.research.google.com/github/Space-filling-net/SquareNet/blob/main/00_getting_started.ipynb
    :alt: Open In Colab
 
 .. image:: https://img.shields.io/pypi/v/squarenet.svg
@@ -14,14 +14,14 @@ squarenet documentation
    :alt: Documentation Status
 
 .. image:: https://img.shields.io/badge/GitHub-Source-6f42c1?logo=github
-   :target: https://github.com/ArmanddeCacqueray/SquareNet
+   :target: https://github.com/Space-filling-net/SquareNet
    :alt: GitHub
 
 
 Introduction
 ============
 
-.. image:: https://raw.githubusercontent.com/ArmanddeCacqueray/SquareNet/main/plots/plot_6.png
+.. image:: https://raw.githubusercontent.com/Space-filling-net/SquareNet/main/plots/plot_6.png
    :alt: SquareNet example plot
    :align: center
 
@@ -47,7 +47,7 @@ Features
 * ✔ Native padding for mismatch between number of grid slots and number of points
   (since version 1.2)
 
-.. image:: https://raw.githubusercontent.com/ArmanddeCacqueray/SquareNet/main/plots/raw_grided2.png
+.. image:: https://raw.githubusercontent.com/Space-filling-net/SquareNet/main/plots/raw_grided2.png
    :width: 400px
    :alt: Raw gridification example
 
